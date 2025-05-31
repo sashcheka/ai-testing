@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="expense_calculator/styles.css">
+    <link rel="icon" type="image/x-icon" href="expense_calculator/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Calculator</h1>
+            <p>Track and analyze your monthly expenses</p>
+        </header>
+
+        <main>
+            <section class="expense-form">
+                <h2>Add New Expense</h2>
+                <form id="expenseForm">
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" required placeholder="e.g., Groceries">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount ($):</label>
+                        <input type="number" id="amount" required min="0" step="0.01" placeholder="e.g., 15000">
+                    </div>
+                    <button type="submit" class="btn">Add Expense</button>
+                </form>
+            </section>
+
+            <section class="expense-list">
+                <h2>Expense List</h2>
+                <div class="table-container">
+                    <table id="expenseTable">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Amount ($)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenseTableBody">
+                            <!-- Expenses will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <button id="calculateBtn" class="btn calculate-btn">Calculate Results</button>
+            </section>
+
+            <section class="results" id="results">
+                <h2>Expense Analysis</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>Total Expenses</h3>
+                        <p id="totalExpenses">$0.00</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>Average Daily Expense</h3>
+                        <p id="averageDaily">$0.00</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>Top 3 Expenses</h3>
+                        <ul id="topExpenses">
+                            <li>No expenses added yet</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created with ❤️ for expense tracking</p>
+        </footer>
+    </div>
+    <script src="expense_calculator/script.js"></script>
+</body>
+</html> 

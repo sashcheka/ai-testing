@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-05-31T16:41:37.147501",
+  "total_products": 20,
+  "products_with_defects": 0,
+  "defects_by_type": {
+    "empty_title": 0,
+    "negative_price": 0,
+    "invalid_rating": 0
+  },
+  "defective_products": []
+}
